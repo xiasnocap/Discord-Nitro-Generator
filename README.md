@@ -1,2 +1,2 @@
 # Discord-Nitro-Generator-Checker
-A powerful/fast Nitro Generator
+The fastest and powerful nitro generator you can find
