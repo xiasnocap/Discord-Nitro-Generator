@@ -58,9 +58,8 @@ def main():
 
     print()
 
-    while a != amount:
+    def gen():
         try:
-            a += 1
             ctypes.windll.kernel32.SetConsoleTitleW(
                 f"Discord Nitro Generator | {a-1} nitro(s) generated")
 
@@ -78,16 +77,24 @@ def main():
             print(
                 f"{Fore.WHITE}[ {Fore.YELLOW}- {Fore.WHITE}] {msg}")
 
-            if a == amount:
-                nitros.write(f"{msg}")
-            else:
-                nitros.write(f"{msg}\n")
+            nitros.write(f"{msg}\n")
 
         except KeyboardInterrupt:
             nitros.close()
             input(
                 f"\n{Fore.WHITE}[ {Fore.GREEN}> {Fore.WHITE}] {len(open('nitro.txt').readlines())} nitros have been generated. (Press any key to close the generator)")
             exit()
+
+    if amount == 0:
+        while True:
+            a += 1
+            gen()
+
+    else:
+
+        while a != amount:
+            gen()
+            a += 1
 
     nitros.close()
     for line in open('nitro.txt').readlines():
