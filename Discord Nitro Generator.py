@@ -70,7 +70,7 @@ def main():
             else:
                 code = "".join(random.choice(string.digits+string.ascii_letters)
                                for _ in range(24))
-            if aaa == "yes":
+            if link == "yes":
                 msg = f"https://discord.com/gifts/{code}"
             else:
                 msg = code
