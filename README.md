@@ -1,2 +1,2 @@
 # Discord-Nitro-Generator
-The fastest and powerful nitro generator you can find
+The fastest and powerful discord nitro generator you can find
